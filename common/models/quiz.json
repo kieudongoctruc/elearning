@@ -1,0 +1,32 @@
+{
+  "name": "Quiz",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "titleQuiz": {
+      "type": "string",
+      "required": true
+    },
+    "isRandom": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chapter": {
+      "type": "belongsTo",
+      "model": "Chapter",
+      "foreignKey": "chapterId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

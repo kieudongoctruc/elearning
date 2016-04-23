@@ -1,0 +1,33 @@
+{
+  "name": "Chapter",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "chapterName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lesson": {
+      "type": "belongsTo",
+      "model": "Lesson",
+      "foreignKey": "lessonId"
+    },
+    "type": {
+      "type": "belongsTo",
+      "model": "Type",
+      "foreignKey": "typeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

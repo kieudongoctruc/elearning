@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Lesson": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Status": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Type": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Chapter": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Content": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Questions": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Answers": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Quiz": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Learning": {
+    "dataSource": "mysql_db",
+    "public": true
+  },
+  "Quizing": {
+    "dataSource": "mysql_db",
+    "public": true
+  }
+}

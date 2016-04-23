@@ -1,0 +1,33 @@
+{
+  "name": "Lesson",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "titleLesson": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId"
+    },
+    "status": {
+      "type": "belongsTo",
+      "model": "Status",
+      "foreignKey": "statusId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

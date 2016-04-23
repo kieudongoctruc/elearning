@@ -1,0 +1,28 @@
+{
+  "name": "Questions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "titleQuestion": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "quiz": {
+      "type": "belongsTo",
+      "model": "Quiz",
+      "foreignKey": "quizId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

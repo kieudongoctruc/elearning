@@ -1,0 +1,34 @@
+{
+  "name": "Quizing",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "idsAnswer": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "learning": {
+      "type": "belongsTo",
+      "model": "Learning",
+      "foreignKey": "leariningId"
+    },
+    "quiz": {
+      "type": "belongsTo",
+      "model": "Quiz",
+      "foreignKey": "quizId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
